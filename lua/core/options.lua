@@ -22,7 +22,7 @@ opt.signcolumn = "yes"
 
 opt.timeoutlen = 5000
 
-opt.spplitright = true
+opt.splitright = true
 opt.splitbelow = true
 
 opt.list = true
