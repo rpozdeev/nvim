@@ -237,4 +237,11 @@ return {
 			end)
 		end,
 	},
+	-- {
+	-- 	"pocco81/auto-save.nvim",
+	-- 	event = { "InsertLeave" },
+	-- 	opts = {
+	-- 		trigger_events = { "InsertLeave" },
+	-- 	},
+	-- },
 }

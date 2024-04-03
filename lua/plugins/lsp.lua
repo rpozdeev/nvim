@@ -26,6 +26,12 @@ return {
 						end,
 					},
 				},
+				{
+					"Exafunction/codeium.nvim",
+					cmd = "Codeium",
+					build = ":Codeium Auth",
+					opts = {},
+				},
 			},
 			"saadparwaiz1/cmp_luasnip",
 
@@ -137,9 +143,11 @@ return {
 				}),
 				sources = {
 					{ name = "path" },
+					-- { name = "codeium", priority = 100 },
 					{ name = "nvim_lsp", keyword_length = 1 },
 					{ name = "buffer", keyword_length = 3 },
 					{ name = "luasnip", keyword_length = 2 },
+					{ name = "codeium" },
 				},
 				window = {
 					documentation = cmp.config.window.bordered(),
@@ -227,10 +235,25 @@ return {
 						},
 					},
 				},
-				terraformls = {},
-				marksman = {},
-				yamlls = {},
-				helm_ls = {},
+				terraformls = {
+					capabilities = capabilities,
+				},
+				marksman = {
+					capabilities = capabilities,
+				},
+				yamlls = {
+					capabilities = capabilities,
+				},
+				helm_ls = {
+					capabilities = capabilities,
+					settings = {
+						["helm-ls"] = {
+							yamlls = {
+								path = "yaml-language-server",
+							},
+						},
+					},
+				},
 			}
 
 			require("mason").setup()
