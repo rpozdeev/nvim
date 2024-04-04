@@ -6,10 +6,11 @@ return {
 			ensure_installed = {
 				"yaml",
 				"lua",
-        "terraform",
-        "hcl",
-        "markdown",
-        "markdown_inline",
+				"terraform",
+				"hcl",
+				"markdown",
+				"markdown_inline",
+				"dockerfile",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
